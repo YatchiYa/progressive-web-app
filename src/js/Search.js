@@ -2,7 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 import fetchJsonp from 'fetch-jsonp';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { MDBCol, MDBFormInline, MDBBtn , MDBIcon} from "mdbreact";
+import { MDBCol, MDBFormInline, MDBBtn , MDBIcon, MDBContainer, MDBRow} from "mdbreact";
 import Track from './Track';
 import NavBar from "./NavBar"
 
@@ -43,23 +43,27 @@ function Search(props) {
 			<div>
 				
 				<div>
-					<MDBCol md="12">
-						<MDBFormInline className="md-form mr-auto mb-4">
-						<div className="input-group md-form form-sm form-6 pl-0">
-							<div className="input-group-prepend">
-							<span className="input-group-text purple lighten-3" id="basic-text1">
-								<MDBIcon className="text-# 4285F4" icon="search" />
-							</span>
-							</div>
-							<input className="form-control my-0 py-1" type="text"  onChange={changeTitle} placeholder="Search" aria-label="Search" />
-							<MDBBtn gradient="# 4285F4" rounded size="sm" type="submit" onClick={onSearch} className="mr-auto">
-							Search
-							</MDBBtn>
-							
-				
-						</div>		
-						</MDBFormInline>
-					</MDBCol>		
+					<MDBContainer>
+						<MDBRow>
+							<MDBCol md="12">
+								<MDBFormInline>
+								<div className="md-form active-cyan active-cyan-2 mb-3">
+									<div className="input-group-prepend">
+										<span className="input-group-text purple lighten-3" id="basic-text1">
+										<MDBIcon className="text-# 4285F4" icon="search" />
+										</span>
+									</div>
+									<input className="form-control my-0 py-1" type="text"  onChange={changeTitle} placeholder="Search" aria-label="Search" />
+									<MDBBtn gradient="# 4285F4" rounded size="sm" type="submit" onClick={onSearch} className="mr-auto">
+									Search
+									</MDBBtn>
+									
+						
+								</div>		
+								</MDBFormInline>
+							</MDBCol>	
+						</MDBRow>
+					</MDBContainer>	
 				</div>
 				<div className="card-group search-results">
 				{musics.map(music => (

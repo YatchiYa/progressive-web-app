@@ -22,10 +22,6 @@ const isLocalhost = Boolean(
 
 const appShellCacheName = 'app-shell-v1';
 const appShellFilesToCache = [
-    
-    '/assets/js/dexie.min.js',
-    '/assets/js/fontawesome-pro-5.13.0.min.js',
-    '/assets/js/lazysizes.min.js',
     '/js/saved.js',
     '/js/search.js',
     '/js/trending.js',
