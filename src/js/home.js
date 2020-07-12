@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from "./NavBar"
+import '../index.css'
 
 
 
@@ -8,10 +8,9 @@ function Home(props) {
 
 
   return (
-    <div>
-      <h1>Welcome to Deeze App</h1>
-      <h2>progressive web app made by : Sylia </h2>
-      <h3>using react js, bootstrap </h3>
+    <div className="background_img">
+    <h3> <strong>Welcole to Deezer app</strong> </h3>
+      <img src={require('../deezer.png')} alt="deeze img" className="img_bk" />
     </div>
     
     );

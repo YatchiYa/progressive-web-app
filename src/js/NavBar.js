@@ -3,10 +3,8 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import React, { Component } from "react";
 import {
-MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
-MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
+MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse
 } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
 
 class NavbarPage extends Component {
 state = {
@@ -36,7 +34,7 @@ render() {
               <MDBNavLink to="Trending">Trending</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="Saved">MySongs</MDBNavLink>
+              <MDBNavLink to="Saved">My Favorite music</MDBNavLink>
             </MDBNavItem>
          
           </MDBNavbarNav>
