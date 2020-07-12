@@ -1,5 +1,6 @@
 import React from 'react';
 import Track from './Track';
+import NavBar from './NavBar'
 
 class Trending extends React.Component{
   constructor(props){
@@ -32,6 +33,7 @@ class Trending extends React.Component{
   render(){
     return(
     <div>
+      <NavBar/>  
        <h1>Les tendances</h1>  
 			
 			<div className="card-group search-results">

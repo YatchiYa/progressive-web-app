@@ -9,25 +9,32 @@ import Trending from './js/Trending';
 import Saved from './js/Saved';
 import Player from './js/Player';
 import Home from './js/home';
-function App() {
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () =>{
-      navigator.serviceWorker.register('./serviceworker.js')
-      .then((reg) => console.log('Success:', reg.scope))
-      .catch((err) => console.log('Failure:', err));
-     
-    })
-  } 
-  return (
-  <Router>
-    <NavBar/>  
-    <Route path='/player' component={Player} />
-    <Route path='/trending' component={Trending} />
-    <Route path='/Search' component={Search}  />
-    <Route path='/saved' component={Saved} />
-    <Route path='//' component={Home} />
-  </Router>
-   
-  );
+
+
+class App extends React.Component {
+  
+  App() {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () =>{
+        navigator.serviceWorker.register('./service-worker.js')
+        .then((reg) => console.log('Success:', reg.scope))
+        .catch((err) => console.log('Failure:', err));
+      
+      })
+    } 
+  }
+
+  render() {
+    return (
+      <Router>
+        <Route path='/' exact component={Home} />
+        <Route path='/player' exact component={Player} />
+        <Route path='/trending' exact component={Trending} />
+        <Route path='/Search' exact component={Search}  />
+        <Route path='/saved' exact component={Saved} />
+      </Router>
+      
+      );
+    }
 }
 export default App;

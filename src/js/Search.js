@@ -3,6 +3,7 @@ import {useState} from 'react';
 import fetchJsonp from 'fetch-jsonp';
 import { MDBCol, MDBIcon} from "mdbreact";
 import Track from './Track';
+import NavBar from './NavBar'
 
 
 function Search(props) {
@@ -37,6 +38,7 @@ function Search(props) {
 
 	return (
 		<div>
+			<NavBar/>  
 			
 			<div>
             <MDBCol md="6">

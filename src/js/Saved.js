@@ -1,5 +1,6 @@
 import React from 'react';
 import Track from './Track';
+import NavBar from './NavBar'
 
 
 class Saved extends React.Component{
@@ -45,6 +46,7 @@ class Saved extends React.Component{
   render(){
     return(
       <div>
+			<NavBar/>  
 			
 			<h1>my favorite </h1>
 			<div className="card-group search-results">
